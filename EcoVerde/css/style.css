@@ -1,0 +1,467 @@
+/* ESTILIZAÇÃO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #80cc28;
+    border: 0;
+    border-radius: 30px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #80cc28;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #00ff0868;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #80cc28;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: .2s ease-in-out;
+}
+
+
+
+
+/* ESTILIZAÇÃO DO CABEÇALHO */
+header{
+    padding: 20px 4%;
+    box-shadow: 0px 0 40px 5px #ffffff1d;
+}
+
+header > .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interface .logo img{
+    width: 125px;
+}
+
+header a{
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+header nav.menu-desktop a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+
+
+
+/* ESTILO DO MENU MOBILE */
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar{
+    color: #80cc28;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #80cc28;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #00000065;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 88888;
+    display: none;
+    transition: .5s;
+}
+
+
+
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 70px 4%;
+}
+
+section.topo-do-sit .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    font-size: 42px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #80cc28;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 8% 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 300px;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+
+
+/* ESTILO DOS CERTIFICADOS */
+section.certificados{
+    padding: 50px 4%;
+}
+
+section.certificados .flex{
+    gap: 60px;
+} 
+
+.certificados .certificados-box{
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s ease-in-out;
+}
+
+.certificados .certificados-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #ffffff6e;
+}
+
+.certificados .certificados-box i{
+    font-size: 70px;
+    color: #80cc28;
+}
+
+.certificados .certificados-box h3{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 70px 8%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #80cc28;
+    display: block;
+}
+
+.sobre .txt-sobre p span{
+    color: #80cc28;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify ;
+    font-size: 18px;
+}
+
+.sobre .txt-sobre .btn-social button{
+    margin-top: 40px;
+}
+
+
+
+
+/* ESTILO DO FORMULARIO */
+section.formulario{
+    padding: 70px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #212121;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 150px;
+}
+
+form input::placeholder{
+    color: #fff;
+    opacity: 0.5;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #80cc28;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+
+
+
+/* ESTILO DO RODAPE */
+footer{
+    padding: 10px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+.interface .logo-footer img{
+    width: 125px;
+}
+
+footer .flex{
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #80cc28;
+}
+
+footer .line-footer p i{
+    color: #80cc28;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+}
+
+footer .line-footer .copy{
+    color: #ffffff21;
+    font-size: 15px;
+}
+
+footer .line-footer .criador{
+    color: #22222296;
+    font-size: 15px;
+}
+
+footer .line-footer .criador a{
+    color: #22222296;
+}
+
+
+
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }    
+
+
+    /* TOPO DO SITE */
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        margin-left: 15px;
+        margin-bottom: 50px;
+    }
+
+
+    /* CERTIFICADOS */
+    section.certificados{
+        padding: 40px 8%;
+    }
+
+    h2.titulo{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+
+    /* SOBRE */
+    section.sobre{
+        padding: 50px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 30px;
+    }
+
+
+    /* ESTILO DO FORMULARIO */
+    section.formulario{
+        padding: 50px 8%;
+    }
+
+
+    /* RODAPE */
+    footer .flex{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /*MENU MOBILE*/
+    .btn-abrir-menu i{
+        color: #80cc28;
+        font-size: 55px;
+    }
+
+}
